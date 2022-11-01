@@ -1,0 +1,199 @@
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/*--------------------*/
+
+
+#root {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background-color: rgb(165, 148, 148);
+}
+
+.app {
+    width: 600px;
+    background-color: #fff;
+    font-size: 18px;
+    line-height: 120%;
+    min-height: 100%;
+    margin-top: 100px;
+    margin: 100px auto 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    &__top {
+        padding: 15px 5px;
+        display: flex;
+        border-bottom: 1px solid black;
+        align-items: center;
+    }
+
+    &__triangle {
+        svg {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        margin-right: 15px;
+    }
+
+    &__title {}
+
+    &__input {
+        font-size: 30px;
+
+    }
+
+    &__bottom {
+        display: flex;
+        padding: 10px 10px;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 17px;
+    }
+
+    &__left {}
+
+    &__tags {
+        display: flex;
+
+        li:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__tag {
+        padding: 3px;
+        cursor: pointer;
+
+
+        &.active {
+            border: 1px solid #ccc;
+        }
+    }
+
+    &__clear {
+        cursor: pointer;
+
+    }
+
+}
+
+
+.todo {
+    display: flex;
+    border-bottom: 1px solid black;
+    padding: 20px 10px;
+
+
+    &__completed {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin-right: 20px;
+        cursor: pointer;
+
+
+        &.completed {
+            background: url('../images/tick.png') center/cover no-repeat;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+
+        &.completed {
+            color: #ccc;
+            text-decoration: line-through;
+        }
+    }
+}
